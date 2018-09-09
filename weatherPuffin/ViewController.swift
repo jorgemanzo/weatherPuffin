@@ -168,7 +168,8 @@ class ViewController: NSViewController {
         Alamofire.request(apiCall).responseObject { (response: DataResponse<weatherResponse>) in
             let weatherResp = response.result.value;
             let tKelvin = (weatherResp?.main?.temp)!;
-            let tFahrenheit = (Double(tKelvin) * Double(9.0/5.0)) - 459.67;
+            var tFahrenheit = (Double(tKelvin) * Double(9.0/5.0)) - 459.67;
+            tFahrenheit = floor(tFahrenheit);
             self.tempLabel.stringValue = String(tFahrenheit) + " °F";
         }
     }
