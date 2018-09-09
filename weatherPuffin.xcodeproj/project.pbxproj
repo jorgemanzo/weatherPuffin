@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81EB8DFD21421A3B00325F6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EB8DFC21421A3B00325F6D /* AppDelegate.swift */; };
+		81EB8DFF21421A3B00325F6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EB8DFE21421A3B00325F6D /* ViewController.swift */; };
+		81EB8E0121421A3D00325F6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81EB8E0021421A3D00325F6D /* Assets.xcassets */; };
+		81EB8E0421421A3D00325F6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EB8E0221421A3D00325F6D /* Main.storyboard */; };
+		C893570C3A73698E54B95901 /* Pods_weatherPuffin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529781E4329DEFFEDBF0D0FE /* Pods_weatherPuffin.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		143C5FE73276B05D24147CAD /* Pods-weatherPuffin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherPuffin.release.xcconfig"; path = "Pods/Target Support Files/Pods-weatherPuffin/Pods-weatherPuffin.release.xcconfig"; sourceTree = "<group>"; };
+		529781E4329DEFFEDBF0D0FE /* Pods_weatherPuffin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherPuffin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EB8DF921421A3B00325F6D /* weatherPuffin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherPuffin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81EB8DFC21421A3B00325F6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81EB8DFE21421A3B00325F6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81EB8E0021421A3D00325F6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81EB8E0321421A3D00325F6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81EB8E0521421A3D00325F6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81EB8E0621421A3D00325F6D /* weatherPuffin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = weatherPuffin.entitlements; sourceTree = "<group>"; };
+		FF55C0B085C022C13D2857D8 /* Pods-weatherPuffin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherPuffin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weatherPuffin/Pods-weatherPuffin.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81EB8DF621421A3B00325F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C893570C3A73698E54B95901 /* Pods_weatherPuffin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81EB8DF021421A3B00325F6D = {
+			isa = PBXGroup;
+			children = (
+				81EB8DFB21421A3B00325F6D /* weatherPuffin */,
+				81EB8DFA21421A3B00325F6D /* Products */,
+				8575E1752B6F5D6317C2C91A /* Pods */,
+				A78F4B9BED3844B1992F5968 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		81EB8DFA21421A3B00325F6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81EB8DF921421A3B00325F6D /* weatherPuffin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81EB8DFB21421A3B00325F6D /* weatherPuffin */ = {
+			isa = PBXGroup;
+			children = (
+				81EB8DFC21421A3B00325F6D /* AppDelegate.swift */,
+				81EB8DFE21421A3B00325F6D /* ViewController.swift */,
+				81EB8E0021421A3D00325F6D /* Assets.xcassets */,
+				81EB8E0221421A3D00325F6D /* Main.storyboard */,
+				81EB8E0521421A3D00325F6D /* Info.plist */,
+				81EB8E0621421A3D00325F6D /* weatherPuffin.entitlements */,
+			);
+			path = weatherPuffin;
+			sourceTree = "<group>";
+		};
+		8575E1752B6F5D6317C2C91A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF55C0B085C022C13D2857D8 /* Pods-weatherPuffin.debug.xcconfig */,
+				143C5FE73276B05D24147CAD /* Pods-weatherPuffin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A78F4B9BED3844B1992F5968 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				529781E4329DEFFEDBF0D0FE /* Pods_weatherPuffin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81EB8DF821421A3B00325F6D /* weatherPuffin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81EB8E0921421A3D00325F6D /* Build configuration list for PBXNativeTarget "weatherPuffin" */;
+			buildPhases = (
+				168AA083BD615DF5AF9665B3 /* [CP] Check Pods Manifest.lock */,
+				81EB8DF521421A3B00325F6D /* Sources */,
+				81EB8DF621421A3B00325F6D /* Frameworks */,
+				81EB8DF721421A3B00325F6D /* Resources */,
+				7733D612ECDCCF642A106F23 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = weatherPuffin;
+			productName = weatherPuffin;
+			productReference = 81EB8DF921421A3B00325F6D /* weatherPuffin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81EB8DF121421A3B00325F6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Beep;
+				TargetAttributes = {
+					81EB8DF821421A3B00325F6D = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 81EB8DF421421A3B00325F6D /* Build configuration list for PBXProject "weatherPuffin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81EB8DF021421A3B00325F6D;
+			productRefGroup = 81EB8DFA21421A3B00325F6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81EB8DF821421A3B00325F6D /* weatherPuffin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81EB8DF721421A3B00325F6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EB8E0121421A3D00325F6D /* Assets.xcassets in Resources */,
+				81EB8E0421421A3D00325F6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		168AA083BD615DF5AF9665B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-weatherPuffin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7733D612ECDCCF642A106F23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-weatherPuffin/Pods-weatherPuffin-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-weatherPuffin/Pods-weatherPuffin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81EB8DF521421A3B00325F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81EB8DFF21421A3B00325F6D /* ViewController.swift in Sources */,
+				81EB8DFD21421A3B00325F6D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		81EB8E0221421A3D00325F6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81EB8E0321421A3D00325F6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81EB8E0721421A3D00325F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81EB8E0821421A3D00325F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		81EB8E0A21421A3D00325F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF55C0B085C022C13D2857D8 /* Pods-weatherPuffin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = weatherPuffin/weatherPuffin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = weatherPuffin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = beep.weatherPuffin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		81EB8E0B21421A3D00325F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143C5FE73276B05D24147CAD /* Pods-weatherPuffin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = weatherPuffin/weatherPuffin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = weatherPuffin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = beep.weatherPuffin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81EB8DF421421A3B00325F6D /* Build configuration list for PBXProject "weatherPuffin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EB8E0721421A3D00325F6D /* Debug */,
+				81EB8E0821421A3D00325F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81EB8E0921421A3D00325F6D /* Build configuration list for PBXNativeTarget "weatherPuffin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81EB8E0A21421A3D00325F6D /* Debug */,
+				81EB8E0B21421A3D00325F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81EB8DF121421A3B00325F6D /* Project object */;
+}
