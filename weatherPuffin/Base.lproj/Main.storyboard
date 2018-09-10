@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -119,24 +120,76 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpr-3F-vDF">
-                                <rect key="frame" x="173" y="73" width="131" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="127" id="VzA-qm-HMx"/>
-                                    <constraint firstAttribute="height" constant="36" id="f2k-lc-Y8G"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="-º F" id="XLK-og-DF8">
-                                    <font key="font" metaFont="system" size="30"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5U-8e-tey">
+                                <rect key="frame" x="191" y="194" width="98" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nearest Station" id="loL-0w-neZ">
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afv-Ye-trP">
+                                <rect key="frame" x="31" y="155" width="419" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="415" id="CsI-6L-Aqh"/>
+                                    <constraint firstAttribute="height" constant="31" id="f8p-vd-8Yw"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="?" id="Bkk-bK-g76">
+                                    <font key="font" metaFont="system" size="26"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="561-d5-YrV">
+                                <rect key="frame" x="109" y="80" width="262" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wpr-3F-vDF">
+                                        <rect key="frame" x="-2" y="0.0" width="131" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="127" id="VzA-qm-HMx"/>
+                                            <constraint firstAttribute="height" constant="36" id="f2k-lc-Y8G"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="-º F" id="XLK-og-DF8">
+                                            <font key="font" metaFont="system" size="30"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a9e-bE-AVz">
+                                        <rect key="frame" x="133" y="0.0" width="131" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="127" id="3sG-5m-NGA"/>
+                                            <constraint firstAttribute="height" constant="36" id="g3N-Bd-Su7"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Cloudy" id="GD0-QN-y63">
+                                            <font key="font" metaFont="system" size="30"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a9e-bE-AVz" firstAttribute="width" secondItem="wpr-3F-vDF" secondAttribute="width" id="Hbv-CZ-7HO"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="GI5-7c-WU9" firstAttribute="height" secondItem="8wc-gm-cuQ" secondAttribute="height" id="BRm-28-H3C"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="a9e-bE-AVz" id="Hwy-KN-DIT"/>
+                        <outlet property="stationLabel" destination="afv-Ye-trP" id="wkU-9c-Rhg"/>
                         <outlet property="tempLabel" destination="wpr-3F-vDF" id="koH-WA-T54"/>
                         <outlet property="zipField" destination="GI5-7c-WU9" id="93I-i5-dg1"/>
                     </connections>

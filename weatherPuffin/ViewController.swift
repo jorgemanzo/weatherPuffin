@@ -157,6 +157,10 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var tempLabel: NSTextField!
     
+    @IBOutlet weak var stationLabel: NSTextField!
+    
+    @IBOutlet weak var descriptionLabel: NSTextField!
+    
     @IBAction func goButtonClicked(_ sender: Any) {
         
         var zipCode = zipField.stringValue;
@@ -171,6 +175,8 @@ class ViewController: NSViewController {
             var tFahrenheit = (Double(tKelvin) * Double(9.0/5.0)) - 459.67;
             tFahrenheit = floor(tFahrenheit);
             self.tempLabel.stringValue = String(tFahrenheit) + " °F";
+            self.stationLabel.stringValue = (weatherResp?.name)!;
+            self.descriptionLabel.stringValue = (weatherResp?.weather?[0].main)!;
         }
     }
     
