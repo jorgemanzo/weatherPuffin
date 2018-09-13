@@ -7,4 +7,5 @@ temperature.
 Currently, all this app does is take your zip code and returns the temperature
 from the nearest available weather station provided by Open Weather Map.
 
-![](/resources/blankWindow.png)
+![](/resources/clearWeather.png)
+![](/resources/rainWeather.png)
