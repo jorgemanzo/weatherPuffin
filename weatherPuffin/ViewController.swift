@@ -161,6 +161,11 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var descriptionLabel: NSTextField!
     
+    @IBOutlet weak var rainCloud: NSImageView!
+    
+    @IBOutlet weak var sunIcon: NSImageView!
+    
+    
     @IBAction func goButtonClicked(_ sender: Any) {
         
         var zipCode = zipField.stringValue;
@@ -177,12 +182,26 @@ class ViewController: NSViewController {
             self.tempLabel.stringValue = String(tFahrenheit) + " °F";
             self.stationLabel.stringValue = (weatherResp?.name)!;
             self.descriptionLabel.stringValue = (weatherResp?.weather?[0].main)!;
+            self.setWeatherIcon(descript: self.descriptionLabel.stringValue);
         }
+    }
+    
+    
+    func setWeatherIcon(descript: String) -> Void {
+        self.rainCloud.isHidden = true;
+        self.sunIcon.isHidden = true;
+        if(self.descriptionLabel.stringValue == "Rain"){
+            self.rainCloud.isHidden = false;
+        } else if(self.descriptionLabel.stringValue == "Clear"){
+            self.sunIcon.isHidden = false;
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.rainCloud.isHidden = true;
+        self.sunIcon.isHidden = true;
         // Do any additional setup after loading the view.
     }
 
