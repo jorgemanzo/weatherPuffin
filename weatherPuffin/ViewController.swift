@@ -173,6 +173,11 @@ class ViewController: NSViewController {
     
     @IBAction func goButtonClicked(_ sender: Any) {
         
+        getData();
+        
+    }
+    
+    func getData() -> Void {
         var zipCode = zipField.stringValue;
         if(zipCode.isEmpty){
             zipCode = "93761";
