@@ -165,6 +165,11 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var sunIcon: NSImageView!
     
+    @IBOutlet weak var cloudIcon: NSImageView!
+    
+    @IBOutlet weak var snowCloud: NSImageView!
+    
+    @IBOutlet weak var lightningCloud: NSImageView!
     
     @IBAction func goButtonClicked(_ sender: Any) {
         
@@ -181,27 +186,39 @@ class ViewController: NSViewController {
             tFahrenheit = floor(tFahrenheit);
             self.tempLabel.stringValue = String(tFahrenheit) + " °F";
             self.stationLabel.stringValue = (weatherResp?.name)!;
-            self.descriptionLabel.stringValue = (weatherResp?.weather?[0].main)!;
-            self.setWeatherIcon(descript: self.descriptionLabel.stringValue);
+            self.descriptionLabel.stringValue = (weatherResp?.weather?[0].description)!;
+            self.setWeatherIcon(descript: (weatherResp?.weather?[0].main)!);
         }
     }
     
     
     func setWeatherIcon(descript: String) -> Void {
-        self.rainCloud.isHidden = true;
-        self.sunIcon.isHidden = true;
-        if(self.descriptionLabel.stringValue == "Rain"){
-            self.rainCloud.isHidden = false;
-        } else if(self.descriptionLabel.stringValue == "Clear"){
-            self.sunIcon.isHidden = false;
+        hideIcons();
+        if(descript == "Rain"){
+            self.rainCloud.isEnabled = true;
+        } else if(descript == "Clear"){
+            self.sunIcon.isEnabled = true;
+        } else if(descript == "Clouds"){
+            self.cloudIcon.isEnabled = true;
+        } else if(descript == "Snow"){
+            self.snowCloud.isEnabled = true;
+        } else if(descript == "Thunderstorm"){
+            self.lightningCloud.isEnabled = true;
         }
         
     }
     
+    func hideIcons() {
+        self.rainCloud.isEnabled = false;
+        self.sunIcon.isEnabled = false;
+        self.cloudIcon.isEnabled = false;
+        self.snowCloud.isEnabled = false;
+        self.lightningCloud.isEnabled = false;
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.rainCloud.isHidden = true;
-        self.sunIcon.isHidden = true;
+        hideIcons();
         // Do any additional setup after loading the view.
     }
 
