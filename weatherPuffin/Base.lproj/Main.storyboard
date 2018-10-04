@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -73,7 +72,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Weather Puffin" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                    <window key="window" title="Weather Puffin" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -110,8 +109,8 @@
                                     <action selector="goButtonClicked:" target="XfG-lQ-9wD" id="PpH-hg-Lyt"/>
                                 </connections>
                             </button>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-Pf-Qj8">
-                                <rect key="frame" x="134" y="66" width="96" height="124"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-Pf-Qj8">
+                                <rect key="frame" x="88" y="66" width="96" height="124"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="afv-Ye-trP">
                                         <rect key="frame" x="-2" y="88" width="100" height="36"/>
@@ -160,19 +159,34 @@
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Zipcode ..." drawsBackground="YES" id="ZYJ-YS-gW5">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFj-ab-jGN">
-                                <rect key="frame" x="285" y="100" width="48" height="48"/>
+                                <rect key="frame" x="285" y="93" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cloud-rain" id="fO6-KC-dWL"/>
+                                <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cloud-rain" id="fO6-KC-dWL"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-Si-ABN">
+                                <rect key="frame" x="339" y="93" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cloud" id="kE4-7g-oKK"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3S-uK-MKJ">
+                                <rect key="frame" x="283" y="149" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cloud-snow" id="xha-a0-3lY"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7H-UQ-5FI">
+                                <rect key="frame" x="339" y="149" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cloud-lightning.1" id="LMW-46-lEE"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-02-Okk">
-                                <rect key="frame" x="283" y="100" width="48" height="48"/>
+                                <rect key="frame" x="284" y="37" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="sun" id="8mV-lZ-uSN"/>
+                                <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="sun" id="8mV-lZ-uSN"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -188,8 +202,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cloudIcon" destination="I0h-Si-ABN" id="8Bh-yB-qAz"/>
                         <outlet property="descriptionLabel" destination="a9e-bE-AVz" id="Hwy-KN-DIT"/>
+                        <outlet property="lightningCloud" destination="w7H-UQ-5FI" id="743-qU-bU7"/>
                         <outlet property="rainCloud" destination="AFj-ab-jGN" id="elv-mZ-xJf"/>
+                        <outlet property="snowCloud" destination="l3S-uK-MKJ" id="zZb-dS-BfY"/>
                         <outlet property="stationLabel" destination="afv-Ye-trP" id="wkU-9c-Rhg"/>
                         <outlet property="sunIcon" destination="wKP-02-Okk" id="7Ce-7N-Bi8"/>
                         <outlet property="tempLabel" destination="wpr-3F-vDF" id="koH-WA-T54"/>
@@ -202,7 +219,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud" width="18" height="18"/>
+        <image name="cloud-lightning.1" width="18" height="18"/>
         <image name="cloud-rain" width="18" height="18"/>
+        <image name="cloud-snow" width="18" height="18"/>
         <image name="sun" width="18" height="18"/>
     </resources>
 </document>
