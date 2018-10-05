@@ -152,7 +152,8 @@ class coordinatePairs: Mappable {
 
 
 class ViewController: NSViewController {
-
+    var timer : Timer = Timer();
+    
     @IBOutlet weak var zipField: NSTextField!
     
     @IBOutlet weak var tempLabel: NSTextField!
@@ -172,28 +173,33 @@ class ViewController: NSViewController {
     @IBOutlet weak var lightningCloud: NSImageView!
     
     @IBAction func goButtonClicked(_ sender: Any) {
-        
         getData();
         
     }
     
-    func getData() -> Void {
+    
+    @objc func getData() -> Void {
+        timer.invalidate();
         var zipCode = zipField.stringValue;
         if(zipCode.isEmpty){
             zipCode = "93761";
         }
-        let apiCall = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APPID=aa9644578cbb315c8d2f7c97b00ecba3";
-        
-        Alamofire.request(apiCall).responseObject { (response: DataResponse<weatherResponse>) in
-            let weatherResp = response.result.value;
-            let tKelvin = (weatherResp?.main?.temp)!;
-            var tFahrenheit = (Double(tKelvin) * Double(9.0/5.0)) - 459.67;
-            tFahrenheit = floor(tFahrenheit);
-            self.tempLabel.stringValue = String(tFahrenheit) + " °F";
-            self.stationLabel.stringValue = (weatherResp?.name)!;
-            self.descriptionLabel.stringValue = (weatherResp?.weather?[0].description)!;
-            self.setWeatherIcon(descript: (weatherResp?.weather?[0].main)!);
+        if(!(zipCode.count < 5 || zipCode.count > 5)) {
+            let apiCall = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APPID=aa9644578cbb315c8d2f7c97b00ecba3";
+            
+            Alamofire.request(apiCall).responseObject { (response: DataResponse<weatherResponse>) in
+                let weatherResp = response.result.value;
+                let tKelvin = (weatherResp?.main?.temp)!;
+                var tFahrenheit = (Double(tKelvin) * Double(9.0/5.0)) - 459.67;
+                tFahrenheit = floor(tFahrenheit);
+                self.tempLabel.stringValue = String(tFahrenheit) + " °F";
+                self.stationLabel.stringValue = (weatherResp?.name)!;
+                self.descriptionLabel.stringValue = (weatherResp?.weather?[0].description)!;
+                self.setWeatherIcon(descript: (weatherResp?.weather?[0].main)!);
+            }
+            timer = Timer.scheduledTimer(timeInterval: 480, target: self, selector: #selector(self.getData), userInfo: nil, repeats: true)
         }
+        
     }
     
     
@@ -226,13 +232,13 @@ class ViewController: NSViewController {
         hideIcons();
         // Do any additional setup after loading the view.
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-
-
+    
+    
 }
 
