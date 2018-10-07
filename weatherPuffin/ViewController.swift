@@ -175,9 +175,11 @@ class ViewController: NSViewController {
     
     @IBAction func goButtonClicked(_ sender: Any) {
         getData();
-        
     }
     
+    @IBAction func zipFieldAction(_ sender: NSTextField) {
+        getData();
+    }
     
     @objc func getData() -> Void {
         timer.invalidate();
