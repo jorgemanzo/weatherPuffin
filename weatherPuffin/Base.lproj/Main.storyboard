@@ -162,6 +162,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="zipFieldAction:" target="XfG-lQ-9wD" id="Kub-yW-FWj"/>
+                                </connections>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFj-ab-jGN">
                                 <rect key="frame" x="285" y="93" width="48" height="48"/>
