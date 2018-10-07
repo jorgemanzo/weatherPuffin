@@ -193,10 +193,13 @@ class ViewController: NSViewController {
                 let tKelvin = (weatherResp?.main?.temp)!;
                 var tFahrenheit = (Double(tKelvin) * Double(9.0/5.0)) - 459.67;
                 tFahrenheit = floor(tFahrenheit);
+                self.descriptionLabel.stringValue = (weatherResp?.weather?[0].description)!;
                 self.tempLabel.stringValue = String(tFahrenheit) + " °F";
                 self.stationLabel.stringValue = (weatherResp?.name)!;
-                self.descriptionLabel.stringValue = (weatherResp?.weather?[0].description)!;
-                self.setWeatherIcon(descript: (weatherResp?.weather?[0].main)!);
+                self.hideIcons();
+                for weatherPack in (weatherResp?.weather)!{
+                    self.setWeatherIcon(descript: weatherPack.main!);
+                }
             }
             timer = Timer.scheduledTimer(timeInterval: 480, target: self, selector: #selector(self.getData), userInfo: nil, repeats: true)
         }
@@ -205,7 +208,6 @@ class ViewController: NSViewController {
     
     
     func setWeatherIcon(descript: String) -> Void {
-        hideIcons();
         if(descript == "Rain"){
             self.rainCloud.isEnabled = true;
         } else if(descript == "Clear"){
