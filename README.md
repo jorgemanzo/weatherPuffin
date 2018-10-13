@@ -20,3 +20,5 @@ A refresh will occur every 8 seconds (if I remember correctly) and it should swi
 
 
 3.	(Maybe) You'll need to allow incoming and outgoing connections in xCode, and maybe a few other small things that xCode can guide you through.
+
+4. Head over to [OpenWeatherMap-APIkeys](https://home.openweathermap.org/api_keys), make an account and get yourself an API key made. Then, paste it in `let API_KEY : String = "YourAPIkeyhere"` in the `ViewController.swift`.
