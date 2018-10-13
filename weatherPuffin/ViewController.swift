@@ -153,6 +153,7 @@ class coordinatePairs: Mappable {
 
 
 class ViewController: NSViewController {
+    let API_KEY : String = "YourAPIkeyhere"
     var timer : Timer = Timer();
     
     @IBOutlet weak var zipField: NSTextField!
@@ -188,7 +189,7 @@ class ViewController: NSViewController {
             zipCode = "93761";
         }
         if(!(zipCode.count < 5 || zipCode.count > 5)) {
-            let apiCall = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APPID=aa9644578cbb315c8d2f7c97b00ecba3";
+            let apiCall = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APPID=" + API_KEY;
             
             Alamofire.request(apiCall).responseObject { (response: DataResponse<weatherResponse>) in
                 let weatherResp = response.result.value;
